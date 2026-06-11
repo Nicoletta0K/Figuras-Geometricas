@@ -10,6 +10,5 @@ System.out.println(c1.getRadio());
 System.out.println(c1.getDiametro());
 System.out.println(c1.getPerimetro());
 System.out.println(c1.getArea());
-        
     }
 }
