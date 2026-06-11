@@ -9,6 +9,10 @@ public class Circulo extends Figuras {
         return radio;
     }
 
+    public Circulo(double radio) {
+        this.radio = radio;
+    }
+
     public double getDiametro() {
         this.diametro=radio*2;
         return diametro;
@@ -22,13 +26,16 @@ public class Circulo extends Figuras {
         this.radio = radio;
     }
     
+ public double calcularDiametro(){
+ this.diametro=radio*2;
+ return diametro;
+ }
 public double calcularPerimetro(){
-this.perimetro=2*Circulo.getPI();
-    
-return 0;}
+this.perimetro=2*Circulo.PI*this.radio;
+    return perimetro;
+}
 public double calcularArea(){
-return 0;}
-
-
-
+    this.area=Math.pow(radio,2)*Circulo.PI;
+    return area;
+  }
 }

@@ -1,12 +1,11 @@
 package figuras.geometricas;
-public class Figuras {
-private double area;
-private double perimetro;
-
+public abstract class Figuras {
     public double getArea() {
-        return area;
+        return calcularArea();
     }
     public double getPerimetro() {
-        return perimetro; 
+        return calcularPerimetro(); 
     }
+    protected abstract double calcularPerimetro();
+    protected abstract double calcularArea();
 }
