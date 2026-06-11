@@ -2,7 +2,6 @@ package Circulos;
 import figuras.geometricas.Figuras;
 public class Circulo extends Figuras {
     private double radio;
-    private double diametro;
     private static final double PI=Math.PI;
 
     public double getRadio() {
@@ -14,8 +13,7 @@ public class Circulo extends Figuras {
     }
 
     public double getDiametro() {
-        this.diametro=radio*2;
-        return diametro;
+        return calcularDiametro();
     }
 
     public static double getPI() {
@@ -26,16 +24,21 @@ public class Circulo extends Figuras {
         this.radio = radio;
     }
     
- public double calcularDiametro(){
- this.diametro=radio*2;
- return diametro;
+ private double calcularDiametro(){
+ return radio*2;
  }
-public double calcularPerimetro(){
-this.perimetro=2*Circulo.PI*this.radio;
-    return perimetro;
+    protected double calcularPerimetro(){;
+    return 2*Circulo.PI*this.radio;
 }
-public double calcularArea(){
-    this.area=Math.pow(radio,2)*Circulo.PI;
-    return area;
+protected double calcularArea(){
+    return Math.pow(radio,2)*Circulo.PI;
   }
-}
+    @Override
+    public String toString() {
+        return "Circulo{/nradio: " + radio +
+                "/nDiametro: " +  getDiametro() + 
+                "/nCircunferencia: " + getPerimetro() +
+                "/nArea: " + getArea() + 
+                "/n}";    
+                };
+    }
